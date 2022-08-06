@@ -6,3 +6,5 @@ The fake store has been built on the latest front end technologies and runs on P
 The account section is located in the cart page, the store doesn’t use a database but customer accounts are kept in another way. (hint… don’t look at the php code for the cart page unless you want to ruin the fun and find out)
 
 There is an account with the username and password “admin” but there is also another account you should be able to find the details for.
+
+Just place the files in a web root and navigate to the site, in future a Docker image will be provided too
