@@ -13,7 +13,7 @@ Just place the files in a web root and navigate to the site, or you can use dock
 
 To pull the docker image enter in your docker cli terminal window
 
-docker pull tobehacked/lab_services:lab1
+'docker pull tobehacked/lab_services:lab1'
 
 Replace lab1 with the lab you want to select. Eg to pull lab7 the command would look like docker pull tobehacked/lab_services:lab7
 
@@ -21,7 +21,7 @@ This may take sometime to download, the image is around 400mb large but is compr
 
 Now we need to get the image ID so we can start it up, to do so enter
 
-sudo docker images
+'sudo docker images'
 
 Then look for the image ID, in our case its 4a84805557fa
 
