@@ -24,10 +24,10 @@ Now we need to get the image ID so we can start it up, to do so enter
 'sudo docker images'
 
 Then look for the image ID, in our case its 4a84805557fa
-
+''
 REPOSITORY                TAG       IMAGE ID       CREATED        SIZE
 tobehacked/lab_services   lab1      4a84805557fa   26 hours ago   456MB
-
+''
 Now we can start the docker image by entering this command (replacing the image ID at the end with your one)
 
 docker run -t 4a84805557fa
