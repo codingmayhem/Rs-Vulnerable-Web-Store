@@ -13,7 +13,7 @@ Just place the files in a web root and navigate to the site, or you can use dock
 
 To pull the docker image enter in your docker cli terminal window
 
-'docker pull tobehacked/lab_services:lab1'
+`docker pull tobehacked/lab_services:lab1`
 
 Replace lab1 with the lab you want to select. Eg to pull lab7 the command would look like docker pull tobehacked/lab_services:lab7
 
@@ -21,29 +21,30 @@ This may take sometime to download, the image is around 400mb large but is compr
 
 Now we need to get the image ID so we can start it up, to do so enter
 
-'sudo docker images'
+`sudo docker images`
 
 Then look for the image ID, in our case its 4a84805557fa
-''
+`
 REPOSITORY                TAG       IMAGE ID       CREATED        SIZE
 tobehacked/lab_services   lab1      4a84805557fa   26 hours ago   456MB
-''
+`
 Now we can start the docker image by entering this command (replacing the image ID at the end with your one)
-
+`
 docker run -t 4a84805557fa
-
+`
 When you run that command you might see an warning from apache regarding ServerName, as your machine is not setup to serve multiple sites this is fine. Next to it you’ll see an IP address, this is the IP you can enter in your web browser to access the lab, in our case it’s 172.17.0.2
-
+`
 apache2: Could not reliably determine the server's fully qualified domain name, using **172.17.0.2**
-
+`
 Now you can play around in the lab and test your security skills. Once you’re done and you want to shutdown the docker image from running we can run some commands to do that
 
 Firstly run “docker ps” so we can get the process ID of our running image, the command output should be like this
-
+`
 user@localhost$ docker ps	
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS     NAMES
 a66f75db122d   4a84805557fa   "docker-php-entrypoi…"   4 minutes ago   Up 4 minutes   80/tcp    stupefied_blackburn
-
+`
 We need this container ID to shut the container / image down, with that id we can run the command “docker kill” and put our ID at the end. In our case it would look like
-
+`
 docker kill a66f75db122d
+`
